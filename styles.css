@@ -1,0 +1,504 @@
+body{
+    font-family: Garamond;
+    max-width: 1100px;
+    margin: auto;
+    
+}
+header{
+    border-bottom-color: #eaeaea;
+    border-bottom-style: solid;
+    border-bottom-width: medium;
+    height: 30px;
+    padding-top: 1%;
+    padding-left: 2%;
+    
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 70px;
+}
+
+
+
+button{
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #ffffff;
+    border-radius: 10%;
+    border-color: #b5b5b5;
+    color: #b5b5b5;
+    font-weight: bold;
+}
+
+
+#Description1{
+    font-weight: bold;
+}
+
+#Description1, .Description2{
+    float: left;
+    margin-left: 2%;
+    
+}
+
+.headerImg{
+    float: right;
+    height: 15px;
+    padding-right: 2%;
+}
+
+#Menu{
+    float: right;
+    height: 20px;
+    padding-right: 2%;
+}
+
+
+@media only screen and (min-width:850px){
+    .greeting{
+        grid-template-areas: 
+        'greetingText greetingPic';
+        grid-template-columns: 50% 50%;
+    }
+    #Menu{
+        display: none;
+    }
+    .item-1 img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .story1{
+        grid-template-areas: 
+            'storyPic1 storyText1 storyText1';
+        grid-template-columns: 34% 33% 33%;
+    }
+    .story2{
+        grid-template-areas: 
+            'storyText2 storyText2 storyPic2';
+        grid-template-columns: 33% 33% 34%;
+    }
+    .story2 img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .Gallery{
+        grid-template-areas: 
+            'galleryPic1 galleryPic2 galleryPic3';
+        grid-template-columns: 33% 34% 33%;
+    }
+    .GalleryInfo1, .GalleryInfo2, .GalleryInfo3 {
+        padding: 10%;
+    }
+    .WriteToUs{
+        grid-template-areas: 'NameLabel NameLabel EmailLabel EmailLabel PhoneLabel PhoneLabel'
+        'NameInput NameInput EmailInput EmailInput PhoneInput PhoneInput'
+        'Contact Contact ContactEmail ContactPhone ContactTelegram ContactTelegram'
+        'Topic Topic Topic Topic Topic Topic'
+        'Selection Selection Selection Selection Selection Selection'
+        'MessageText MessageText MessageText MessageText MessageText MessageText'
+        'MessageBox MessageBox MessageBox MessageBox MessageBox MessageBox'
+        'Check Check Check Check Check Send';
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+}
+
+@media only screen and (max-width:850px) and (min-width:600px){
+    .headerImg{
+        display: none;
+    }
+    #Menu{
+        display: none;
+    }
+    .greeting{
+        grid-template-areas: 
+        'greetingText greetingPic';
+        grid-template-columns: 50% 50%;
+    }
+    .story1, .story2{
+        grid-template-areas: 
+        'storyPic1 storyText1'
+        'storyText2 storyPic2';
+        grid-template-columns: 50% 50%;
+    }
+    .Gallery{
+        grid-template-areas: 
+            'galleryPic2 galleryPic3';
+        grid-template-columns: 50% 50%;
+    }
+    .GalleryInfo1, .GalleryInfo2, .GalleryInfo3 {
+        padding: 12%;
+    }
+    .WriteToUs{
+        grid-template-areas: 'NameLabel NameLabel EmailLabel EmailLabel PhoneLabel PhoneLabel'
+        'NameInput NameInput EmailInput EmailInput PhoneInput PhoneInput'
+        'Contact Contact ContactEmail ContactPhone ContactTelegram ContactTelegram'
+        'Topic Topic Topic Topic Topic Topic'
+        'Selection Selection Selection Selection Selection Selection'
+        'MessageText MessageText MessageText MessageText MessageText MessageText'
+        'MessageBox MessageBox MessageBox MessageBox MessageBox MessageBox'
+        'Check Check Check Check Check Send';
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media only screen and (max-width:600px){
+    .Description2{
+        display: none;
+    }
+    .headerImg{
+        display: none;
+    }
+    .greeting{
+        grid-template-areas: 
+            'greetingPic'
+            'greetingText';
+        grid-template-columns: 100%;
+    }
+    .item-1 img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    .story1, .story2{
+        grid-template-areas: 
+            'storyPic1'
+            'storyText1'
+            'storyPic2'
+            'storyText2';
+        grid-template-columns: 100%;
+    }
+    .story1 img, .story2 img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .Gallery{
+        grid-template-areas: 
+            'galleryPic2';
+        grid-template-columns: 100%;
+    }
+    .GalleryInfo1, .GalleryInfo2, .GalleryInfo3 {
+        padding: 18%;
+    }
+    .WriteToUs{
+        grid-template-areas: 
+        'NameLabel NameLabel NameLabel NameLabel'
+        'NameInput NameInput NameInput NameInput' 
+        'EmailLabel EmailLabel EmailLabel EmailLabel'
+        'EmailInput EmailInput EmailInput EmailInput' 
+        'PhoneLabel PhoneLabel PhoneLabel PhoneLabel'
+        'PhoneInput PhoneInput PhoneInput PhoneInput'
+        'Contact Contact Contact Contact' 
+        'ContactEmail ContactPhone ContactTelegram ContactTelegram'
+        'Topic Topic Topic Topic'
+        'Selection Selection Selection Selection'
+        'MessageText MessageText MessageText MessageText'
+        'MessageBox MessageBox MessageBox MessageBox'
+        'Check Check Check Send';
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.item-1{
+    grid-area: greetingPic;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    overflow: hidden;
+}
+.item-2{
+    grid-area: greetingText;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    padding: 40px;
+}
+
+             
+.greeting, .story1, .story2{
+    display: grid;
+    grid-gap: 0px; 
+}
+
+
+
+.story1, .story2, .greeting{
+    border-bottom-color: #eaeaea;
+    border-bottom-style: solid;
+    border-bottom-width: medium;
+}
+
+.story1 h2, .story2 h2{
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.item-3{
+    grid-area: storyPic1;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    overflow: hidden;
+}
+.item-4{
+    grid-area: storyText1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    padding: 40px;
+}
+.item-5{
+    grid-area: storyText2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    padding: 40px;
+}
+.item-6{
+    grid-area: storyPic2;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+.Gallery{
+    display: grid;
+    grid-gap: 0px;
+}
+
+.Gallery img{
+    width: 100%;
+}
+
+.item-7{
+    grid-area: galleryPic1;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.GalleryInfo1 {
+    display: none;
+    position: absolute;
+    bottom: 0;  
+    left: 0; 
+    right: 0; 
+    top: 0; 
+    background-color: rgba(41, 166, 217, 0.65);
+    
+}
+.item-8{
+    grid-area: galleryPic2;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    color: white;
+
+}
+.GalleryInfo2 {
+    display: none;
+    position: absolute;
+    bottom: 0;  
+    left: 0; 
+    right: 0; 
+    top: 0; 
+    background-color: rgba(135, 206, 235, 0.65);
+}
+.item-9{
+    grid-area: galleryPic3;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.GalleryInfo3 {
+    display: none;
+    position: absolute;
+    bottom: 0;  
+    left: 0; 
+    right: 0; 
+    top: 0; 
+    background-color: rgba(62, 220, 248, 0.65);
+}
+.item-7:hover .GalleryInfo1{
+    display: block;
+}
+.item-8:hover .GalleryInfo2{
+    display: block;
+}
+.item-9:hover .GalleryInfo3{
+    display: block;
+}
+
+
+
+.Features{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evently;
+    
+}
+
+.feature{
+    margin-bottom: 40px;
+    flex-basis: 280px;
+    text-align: center;
+    align-self: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature p{
+    text-align: center;
+}
+
+
+
+
+.WriteToUs{
+    margin-left: 8%;
+    margin-right: 8%;
+    grid-gap: 15px;
+    display: grid;
+    margin-bottom: 50px;
+}
+
+select, textarea{
+    width: 100%;
+}
+select{
+    height: 30px;
+}
+textarea{
+    height: 120px;
+}
+checkbox, select, textarea, input{
+    border-color: #c4c4c4;
+    border-collapse: separate;
+}
+
+.item-10, .item-11, .item-12, .item-13, .item-14, .item-15, .item-16, .item-17, .item-18, .item-19, .item-20, .item-21, .item-22, .item-23, .item-24, .item-25{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.item-10, .item-11, .item-12{
+    font-weight: bold;
+}
+.item-10{
+    grid-area: NameLabel;
+}
+.item-11{
+    grid-area: EmailLabel;
+}
+.item-12{
+    grid-area: PhoneLabel;
+}
+.item-13 input, .item-14 input, .item-15 input{
+    width: 100%;
+    height: 25px;
+}
+.item-13{
+    grid-area: NameInput;
+}
+.item-14{
+    grid-area: EmailInput;
+}
+.item-15{
+    grid-area: PhoneInput;
+}
+.item-16{
+    grid-area: Contact;
+    font-weight: bold;
+}
+.item-17{
+    grid-area: ContactEmail;
+}
+.item-18{
+    grid-area: ContactPhone;
+}
+.item-19{
+    grid-area: ContactTelegram;
+}
+.item-20{
+    grid-area: Topic;
+    font-weight: bold;
+}
+.item-21{
+    grid-area: Selection;
+}
+
+.item-22{
+    grid-area: MessageText;
+    font-weight: bold;
+}
+.item-23{
+    grid-area: MessageBox;
+    justify-content: center;
+}
+.item-24{
+    grid-area: Check;
+    font-weight: bold;
+}
+.item-25{
+    grid-area: Send;
+    justify-content: center;
+}
+
+footer{
+    border-top-color: #eaeaea;
+    border-top-style: solid;
+    border-top-width: medium;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.footerImg{
+    margin-left: 1%;
+}
+
+footer img{
+    border-color: #b5b5b5;
+    border-style: solid;
+    border-radius: 50%;
+    padding: 0.3%;
+    border-width: thin;
+    
+}
+
+ .SocLink:hover{
+    background-color: gainsboro;
+    
+}
+
+#blockFoot{
+    margin-bottom: 2%;
+}
