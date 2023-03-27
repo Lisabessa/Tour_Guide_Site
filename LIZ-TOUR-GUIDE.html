@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <script src="site_script.js"></script>
   
        <header>
         <div id="Description1">TOUR-GUIDE</div>
@@ -178,7 +179,7 @@
         
         <h2>Write to us</h2>
            
-            <form class="WriteToUs" method="post" action="">
+            <form class="WriteToUs" method="post" action="" onsubmit="alert('Send'); return false">
                
                 <div class="item-10">Name:</div>
                 <div class="item-11">Email:</div>
@@ -230,7 +231,7 @@
                
                
                 <div class="item-24"><input type="checkbox" name="human" value="Human">I am human</div>
-                <button name="btnsend" class="item-25">SEND</button>
+                <button type="submit" name="btnsend" class="item-25" onclick="alert('Click');">SEND</button>
                
                
             </form>
