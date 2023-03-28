@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <script src="site_script.js"></script>
   
        <header>
         <div id="Description1">TOUR-GUIDE</div>
@@ -179,31 +178,29 @@
         
         <h2>Write to us</h2>
            
-            <form class="WriteToUs" method="post" action="" onsubmit="alert('Send'); return false">
+            <form class="WriteToUs" method="post" action="" onsubmit="return false;">
                
                 <div class="item-10">Name:</div>
                 <div class="item-11">Email:</div>
                 <div class="item-12">Phone:</div>
              
                 <div class="item-13">
-                    <input name="userName" type="text">
+                    <input name="userName" type="text" required>
                 </div>
                 
                 <div class="item-14">
-                    <input name="userEmail" type="email">
+                    <input name="userEmail" type="email" required>
                 </div>
                 
                 <div class="item-15">
-                    <input name="userPhone" type="tel">
+                    <input name="userPhone" type="tel" required>
                 </div>
-                
-                    
                
                
                <div class="item-16">Contact me via: </div>
                
                    
-               <div class="item-17"><input name="contact" type="radio" value="Email">Email</div>
+               <div class="item-17"><input name="contact" type="radio" value="Email" checked>Email</div>
                    
                 <div class="item-18"><input name="contact" type="radio" value="Phone">Phone</div>
                    
@@ -226,12 +223,12 @@
                <div class="item-22">Message:</div>
                
                <div class="item-23">
-                   <textarea name="Message"></textarea>
+                   <textarea name="Message" required></textarea>
                </div>
                
                
-                <div class="item-24"><input type="checkbox" name="human" value="Human">I am human</div>
-                <button type="submit" name="btnsend" class="item-25" onclick="alert('Click');">SEND</button>
+                <div class="item-24"><input type="checkbox" name="human" value="Human" required>I am human</div>
+                <button type="submit" name="btnsend" class="item-25">SEND</button>
                
                
             </form>
@@ -260,5 +257,7 @@
        &copy;ElizavetaPlavinskaya2023
         
     </footer>
+
+    <script src="site_script.js"></script>
 </body>
 </html>
