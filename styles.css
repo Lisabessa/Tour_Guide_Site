@@ -1,9 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: Garamond;
     max-width: 1100px;
     margin: auto;
     
 }
+
 header{
     border-bottom-color: #eaeaea;
     border-bottom-style: solid;
@@ -20,8 +25,6 @@ h2{
     margin-top: 70px;
 }
 
-
-
 button{
     padding: 10px;
     padding-left: 20px;
@@ -32,7 +35,6 @@ button{
     color: #b5b5b5;
     font-weight: bold;
 }
-
 
 #Description1{
     font-weight: bold;
@@ -55,7 +57,6 @@ button{
     height: 20px;
     padding-right: 2%;
 }
-
 
 @media only screen and (min-width:850px){
     .greeting{
@@ -223,14 +224,11 @@ button{
     overflow: hidden;
     padding: 40px;
 }
-
-             
+          
 .greeting, .story1, .story2{
     display: grid;
     grid-gap: 0px; 
 }
-
-
 
 .story1, .story2, .greeting{
     border-bottom-color: #eaeaea;
@@ -278,8 +276,6 @@ button{
     width: 100%;
     overflow: hidden;
 }
-
-
 
 .Gallery{
     display: grid;
@@ -356,8 +352,6 @@ button{
     display: block;
 }
 
-
-
 .Features{
     display: flex;
     flex-wrap: wrap;
@@ -377,9 +371,6 @@ button{
 .feature p{
     text-align: center;
 }
-
-
-
 
 .WriteToUs{
     margin-left: 8%;
