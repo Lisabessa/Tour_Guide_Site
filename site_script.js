@@ -43,3 +43,7 @@ function CheckInfo(name, email, phone){
     }
     return false;
 }
+
+function Go_To_Tours(){
+    window.location.href = 'Tours.html';
+}
